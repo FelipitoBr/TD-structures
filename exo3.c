@@ -55,12 +55,12 @@ typedef struct
 }Ninjago;
 Ninjago buildNinja(Ninjago Ninja)
 {
-	Ninja.attaque= rand()%6+5;
-	Ninja.defense= rand()%3+2;
-	Ninja.esquive= ((float)rand()/(float)(RAND_MAX)) * 0.2;
+	Ninja.attaque= 5+ ((float)rand()/(float)(RAND_MAX)) * 5;
+	Ninja.defense= 2+((float)rand()/(float)(RAND_MAX)) * 2;
+	Ninja.esquive= 0.1+((float)rand()/(float)(RAND_MAX)) * 0.1;
 	if(Ninja.esquive==0)
 		Ninja.esquive=0.1;
-	Ninja.pv= rand()%21+80;
+	Ninja.pv= 20+((float)rand()/(float)(RAND_MAX)) *80 ;
 	printf("Saisir nom du ninja:");
 	scanf("%s", Ninja.nom);
 	return Ninja;
@@ -117,7 +117,6 @@ int main(int argc, char **argv)
 	
 	return 0;
 }
-//float x = ((float)rand()/(float)(RAND_MAX)) * a; generate a random float number from 1 to a
  
 
 
